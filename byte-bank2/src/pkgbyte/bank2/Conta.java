@@ -10,7 +10,7 @@ package pkgbyte.bank2;
  * @author Lenovo
  */
 public class Conta {
-    double saldo;
+    private double saldo;
     int agencia;
     int numero;
     Cliente titular;
@@ -28,7 +28,15 @@ public class Conta {
         }
     }
     
-    void transfere(double valor){
-        
+    public boolean transfere(double valor, Conta destino){
+        if( this.saldo >= valor){
+            this.saldo -= valor;
+            destino.deposita(valor);
+            return true;
+        }
+        return false; 
     }   
+    public double pegaSaldo(){
+    return this.saldo;
+    }
 }
