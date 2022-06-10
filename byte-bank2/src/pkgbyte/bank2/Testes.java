@@ -9,21 +9,20 @@ package pkgbyte.bank2;
  *
  * @author Lenovo
  */
-public class TestaBanco {
+public class Testes {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Cliente paulo = new Cliente();
-        paulo.nome = "Paulo Silveira";
-        paulo.cpf = "111111111-11";
-        paulo.profissao = "Estudante";
-        
-        Conta contaDoPaulo = new Conta();
-        contaDoPaulo.deposita(100);
-        contaDoPaulo.titular = paulo;
-        // TODO code application logic here
+       Gerente g = new Gerente();
+       g.setNome("Lucas");
+       g.setCpf("000 000 000");
+       g.setSalario(5000.0);
+       
+       boolean autenticou = g.autentica(22);
+        System.out.println(autenticou);
+       
     }
     
 }
