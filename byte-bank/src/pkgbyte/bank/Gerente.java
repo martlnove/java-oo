@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pkgbyte.bank2;
+package pkgbyte.bank;
 
 /**
  *
@@ -30,9 +30,9 @@ public class Gerente extends Funcionario {
         this.senha = senha;
     }
     
-//    public double getBonificacao(){
-//        return this.salario;
-//    }
+    public double getBonificacao(){
+        return super.salario;
+    }
     
     
 }

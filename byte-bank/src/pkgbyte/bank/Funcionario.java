@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pkgbyte.bank2;
+package pkgbyte.bank;
 
 /**
  *
@@ -13,7 +13,7 @@ public class Funcionario {
     
     private String nome;
     private String cpf;
-    private double salario;
+    protected double salario;
     
     public Funcionario(){
         
