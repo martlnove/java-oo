@@ -15,13 +15,33 @@ public class Testes {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       Gerente g = new Gerente();
-       g.setNome("Lucas");
-       g.setCpf("000 000 000");
-       g.setSalario(5000.0);
+       Gerente g1 = new Gerente();
+       g1.setNome("Lucas");
+       g1.setSalario(5000);
        
-       boolean autenticou = g.autentica(22);
-        System.out.println(autenticou);
+       Funcionario f1 = new Funcionario();
+       f1.setNome("Martins");
+       f1.setSalario(2000);
+       
+       Funcionario ev = new EditorVideo();
+       ev.setNome("Jorge");
+       ev.setSalario(2500);
+       
+       Funcionario d = new Designer();
+       d.setNome("Claudio");
+       d.setSalario(2000);
+       
+       ControleBonificacao controle = new ControleBonificacao();
+       controle.registra(g1);
+       controle.registra(f1);
+       controle.registra(ev);
+       controle.registra(d);
+       
+        System.out.println(controle.getSoma());
+ 
+ 
+       
+
        
     }
     
