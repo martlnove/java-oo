@@ -9,9 +9,17 @@ package pkgbyte.bank;
  *
  * @author Lenovo
  */
-public class EditorVideo extends Funcionario {
-    public double getBonificacao(){
-        return 150;
+public class ContaPoupanca extends Conta {
+    
+    public ContaPoupanca(int agencia, int numero) {
+        super(agencia, numero);
     }
+    
+    @Override
+    public void deposita(double valor){
+        super.saldo += valor;
+        
+    }
+    
     
 }
