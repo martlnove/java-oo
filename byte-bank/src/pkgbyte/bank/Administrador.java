@@ -9,13 +9,22 @@ package pkgbyte.bank;
  *
  * @author Lenovo
  */
-public class Cliente implements Autenticavel {
 
+public class Administrador extends Funcionario implements Autenticavel {
     private AutenticacaoUtil autenticador;
-    
-    public Cliente(){
+
+    public Administrador(){
         this.autenticador = new AutenticacaoUtil();
     }
+    
+    
+    
+    @Override
+    public double getBonificacao(){
+        return 50;
+    }
+
+    
     
     
     @Override

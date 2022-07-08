@@ -15,13 +15,14 @@ public class Testes {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       ContaCorrente cc = new ContaCorrente(111,111);
-       cc.deposita(100.0);
+       Gerente g = new Gerente();
+       g.setSenha(2222);
        
-       ContaPoupanca cp = new ContaPoupanca(222,222);
-       cp.deposita(200.0);
+       SistemaInterno s = new SistemaInterno();
+       s.autentica(g);
        
-       cc.transfere(10.0, cp);
+       Autenticavel gerente = new Gerente();
+       
     }
     
 }

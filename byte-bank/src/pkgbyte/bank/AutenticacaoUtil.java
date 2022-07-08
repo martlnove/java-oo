@@ -9,23 +9,19 @@ package pkgbyte.bank;
  *
  * @author Lenovo
  */
-public class Cliente implements Autenticavel {
-
-    private AutenticacaoUtil autenticador;
-    
-    public Cliente(){
-        this.autenticador = new AutenticacaoUtil();
-    }
-    
-    
-    @Override
+public class AutenticacaoUtil {
+    private int senha;
     public void setSenha(int senha) {
-        this.autenticador.setSenha(senha);
+        this.senha = senha;
     }
 
-    @Override
     public boolean autentica(int senha) {
-        return this.autenticador.autentica(senha);
+        if(this.senha == senha){
+            return true;
+        }else{
+            return false;
+        }
     }
-
+    
+    
 }
